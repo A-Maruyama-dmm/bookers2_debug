@@ -17,8 +17,6 @@ class UsersController < ApplicationController
     unless current_user.id == @user.id
       redirect_to user_path(current_user)
     end
-
-
   end
 
   def update
