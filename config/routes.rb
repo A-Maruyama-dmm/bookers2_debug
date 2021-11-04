@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'homes#top'
 
   get 'home/about'=>'homes#about'
-  get 'search' => 'books#search'
+  get 'search' => 'searchs#search'
 
   resources :users,only: [:show,:index,:edit,:update] do
     member do   #resourcesは7つのルーティングを行ってくれますが、memberを使うことで、別のルーティングを追加できます。
