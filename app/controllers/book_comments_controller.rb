@@ -12,7 +12,8 @@ class BookCommentsController < ApplicationController
   end
 
   def destroy
-  BookComment.find_by(id: params[:id]).destroy
+   @book = Book.find(params[:book_id])
+   BookComment.find_by(id: params[:id]).destroy
     #redirect_to book_path(params[:book_id])(非同期通信のため)
 
   end
